@@ -11,6 +11,7 @@ const weather = {};
     }
 
     const KELVIN = 273;
+    const CELSIUS = KELVIN - 273;
     //API kEY
     const key = "3c9686c88bcef13840e4b06151909ee9";
 
@@ -38,8 +39,9 @@ const weather = {};
             let data = response.json();
             return data;
         }).then(function(data){
+            // weather.temperature.value = Math.floor(data.main.temp - (KELVIN-273));
             weather.temperature.value = Math.floor(data.main.temp - KELVIN);
-            weather.temperature.value = data.weather[0].description;
+            weather.description = data.weather[0].description;
             weather.iconId = data.weather[0].icon;
             weather.city = data.name;
             weather.country = data.sys.country;

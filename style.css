@@ -24,7 +24,7 @@ body{
 }
 .app-title{
     text-align: center;
-    font-size: medium;
+    font-size: large;
     font-weight: bold;
     height: 50px;
     color: #293251;
@@ -64,10 +64,13 @@ body{
 }
 .temperature-description{
     text-align: center;
+    display: block;
 }
 .temperature-description p{
     font-size: 1em;
     display: block;
+    color: #293251;
+    padding-bottom: 5px;
 }
 .location p{
     text-align: center;
@@ -75,6 +78,7 @@ body{
     padding: 0;
     color: #293251;
     font-size: 0.8em;
+   
 }
 .notification{
     background-color: #f8d7da;
